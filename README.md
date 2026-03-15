@@ -1,3 +1,9 @@
+<!-- ================= HERO BANNER ================= -->
+
+<p align="center">
+<img src="images/sentinel-banner.png" width="100%">
+</p>
+
 <h1 align="center">🛡️ Azure Sentinel Security Monitoring Lab</h1>
 
 <p align="center">
@@ -6,14 +12,16 @@ A hands-on <b>Cybersecurity Lab</b> demonstrating how to build a <b>Security Mon
 
 <p align="center">
 
-![Azure](https://img.shields.io/badge/Azure-Security-blue?logo=microsoftazure)
-![Sentinel](https://img.shields.io/badge/SIEM-Microsoft%20Sentinel-purple)
-![Cybersecurity](https://img.shields.io/badge/Domain-Cybersecurity-red)
-![Platform](https://img.shields.io/badge/Platform-Azure-blue)
-![Logs](https://img.shields.io/badge/Logs-Windows%20Security%20Events-green)
-![Status](https://img.shields.io/badge/Project-Lab-success)
+<img src="https://img.shields.io/badge/Cloud-Microsoft%20Azure-blue?logo=microsoftazure"/>
+<img src="https://img.shields.io/badge/SIEM-Microsoft%20Sentinel-purple"/>
+<img src="https://img.shields.io/badge/Domain-Cybersecurity-red"/>
+<img src="https://img.shields.io/badge/Logs-Windows%20Security%20Events-green"/>
+<img src="https://img.shields.io/badge/Project-Security%20Lab-success"/>
+<img src="https://img.shields.io/badge/Status-Completed-brightgreen"/>
 
 </p>
+
+---
 
 <p align="center">
 <img src="architecture/sentinel-architecture.png" width="900">
