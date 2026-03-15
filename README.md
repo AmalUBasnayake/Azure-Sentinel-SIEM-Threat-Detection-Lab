@@ -1,4 +1,10 @@
-# 🛡️ Azure Sentinel Security Monitoring Lab
+<h1 align="center">🛡️ Azure Sentinel Security Monitoring Lab</h1>
+
+<p align="center">
+A hands-on <b>Cybersecurity Lab</b> demonstrating how to build a <b>Security Monitoring Environment</b> using <b>Microsoft Sentinel (SIEM)</b> in Microsoft Azure.
+</p>
+
+<p align="center">
 
 ![Azure](https://img.shields.io/badge/Azure-Security-blue?logo=microsoftazure)
 ![Sentinel](https://img.shields.io/badge/SIEM-Microsoft%20Sentinel-purple)
@@ -6,6 +12,12 @@
 ![Platform](https://img.shields.io/badge/Platform-Azure-blue)
 ![Logs](https://img.shields.io/badge/Logs-Windows%20Security%20Events-green)
 ![Status](https://img.shields.io/badge/Project-Lab-success)
+
+</p>
+
+<p align="center">
+<img src="architecture/sentinel-architecture.png" width="900">
+</p>
 
 ---
 
@@ -27,11 +39,48 @@ The lab includes:
 
 ---
 
-# 🏗️ Lab Architecture
+# 📊 Azure Sentinel Architecture
 
-Azure VM → Azure Monitor Agent → Log Analytics Workspace → Microsoft Sentinel → Log Analytics Queries → Security Investigation
+This project simulates a **SOC monitoring pipeline in Microsoft Azure**.
 
-This architecture allows security analysts to monitor authentication events, suspicious logins, and other Windows security activities.
+Logs generated from a **Windows Virtual Machine** are collected using the **Azure Monitor Agent (AMA)** and sent to **Log Analytics Workspace**, where **Microsoft Sentinel** performs security analysis and threat detection.
+
+---
+
+## 🔗 Security Data Flow
+
+```mermaid
+flowchart LR
+
+A[Windows Virtual Machine] --> B[Azure Monitor Agent]
+B --> C[Data Collection Rule]
+C --> D[Log Analytics Workspace]
+D --> E[Microsoft Sentinel SIEM]
+E --> F[Threat Detection Rules]
+F --> G[Security Alerts]
+G --> H[SOC Analyst Investigation]
+```
+
+---
+
+# ⚙️ Security Monitoring Pipeline
+
+```mermaid
+sequenceDiagram
+
+participant VM as Windows Server VM
+participant AMA as Azure Monitor Agent
+participant LAW as Log Analytics Workspace
+participant Sentinel as Microsoft Sentinel
+participant Analyst as SOC Analyst
+
+VM->>AMA: Generate Security Events
+AMA->>LAW: Send Windows Logs
+LAW->>Sentinel: Log Ingestion
+Sentinel->>Sentinel: Threat Detection Rules
+Sentinel->>Analyst: Security Alerts
+Analyst->>Sentinel: Threat Investigation
+```
 
 ---
 
@@ -88,7 +137,7 @@ This machine will generate **Windows Security Events for monitoring**.
 
 The **Azure Monitor Agent (AMA)** is installed on the virtual machine using VM Extensions.
 
-This agent is responsible for sending system and security logs to Azure Monitor and Microsoft Sentinel.
+This agent sends logs to **Azure Monitor and Microsoft Sentinel**.
 
 ---
 
@@ -137,7 +186,7 @@ Event Collection: `All Security Events`
 
 The target VM is assigned to the created Data Collection Rule.
 
-This step allows the VM to start **sending Windows Security Events to Microsoft Sentinel**.
+This allows the VM to start **sending Windows Security Events to Microsoft Sentinel**.
 
 ---
 
@@ -145,7 +194,7 @@ This step allows the VM to start **sending Windows Security Events to Microsoft 
 
 ![Sentinel Logs](images/logs.png)
 
-Once logs start arriving, they can be analyzed using **Kusto Query Language (KQL)** inside Microsoft Sentinel.
+Once logs start arriving, they can be analyzed using **Kusto Query Language (KQL)**.
 
 Example query to detect failed login attempts:
 
@@ -153,3 +202,96 @@ Example query to detect failed login attempts:
 SecurityEvent
 | where EventID == 4625
 | project TimeGenerated, Computer, Account, IpAddress, EventID
+```
+
+Event ID **4625** represents **failed authentication attempts**.
+
+---
+
+# 🔎 Example Threat Detection
+
+![Failed Login Attempts](images/4625-logs.png)
+
+Security analysts can identify:
+
+- Suspicious IP addresses  
+- Repeated login failures  
+- Possible brute force attacks  
+- Unauthorized access attempts  
+
+---
+
+# 📈 Microsoft Sentinel Monitoring Dashboard
+
+![Sentinel Dashboard](images/dashboard.png)
+
+Microsoft Sentinel provides centralized capabilities for:
+
+- Log analysis  
+- Threat hunting  
+- Security investigation  
+- Alert creation  
+- Incident response  
+
+---
+
+# 🎯 Security Monitoring Capabilities
+
+✔ Failed Login Detection  
+✔ Brute Force Attack Identification  
+✔ Suspicious Authentication Monitoring  
+✔ Security Event Investigation  
+✔ Centralized Log Analysis  
+
+---
+
+# 🧠 Technologies Used
+
+- Microsoft Azure  
+- Microsoft Sentinel (SIEM)  
+- Azure Monitor Agent  
+- Log Analytics Workspace  
+- Kusto Query Language (KQL)  
+- Windows Security Events  
+
+---
+
+# 📁 Repository Structure
+
+```
+Azure-Sentinel-Security-Lab
+│
+├── README.md
+│
+├── images
+│   ├── Log-Analytics.png
+│   ├── add-Microsoft-Sentinel.png
+│   ├── create-VM.png
+│   ├── Sentinel-Target-VM-Extensions+applications.png
+│   ├── Windows-Security-Events-install.png
+│   ├── MSDC.png
+│   ├── create-data-connection-rule.png
+│   ├── set-VM-MSDC.png
+│   ├── logs.png
+│   ├── 4625-logs.png
+│   └── dashboard.png
+│
+└── architecture
+    └── sentinel-architecture.png
+```
+
+---
+
+# 👨‍💻 Author
+
+**Amal Udayanga Basnayake**
+
+Cybersecurity Enthusiast  
+Cloud Security | Microsoft Sentinel | Azure Security  
+
+GitHub  
+https://github.com/AmalUBasnayake  
+
+---
+
+⭐ If you found this project useful, consider giving the repository a **star**.
