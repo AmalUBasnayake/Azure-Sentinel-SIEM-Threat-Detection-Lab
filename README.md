@@ -301,6 +301,14 @@ Cloud Security • SIEM • Threat Detection • Microsoft Sentinel • Azure Se
 GitHub  
 https://github.com/AmalUBasnayake  
 
+Linkedln
+
+https://www.linkedin.com/in/amal-udayanga-basnayake
+
+Medium 
+
+https://medium.com/@amalubasnayake/️-building-a-siem-threat-detection-lab-using-microsoft-sentinel-in-azure-2303339c6353
+
 ---
 
 ⭐ If you found this project useful, consider giving the repository a **star**.
