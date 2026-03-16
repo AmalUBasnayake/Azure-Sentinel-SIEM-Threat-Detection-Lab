@@ -23,6 +23,8 @@ A hands-on <b>Cybersecurity Lab</b> demonstrating how to build a <b>Security Mon
 
 ---
 
+## 🧩 Sentinel Security Monitoring Architecture
+
 <p align="center">
 <img src="architecture/sentinel-architecture.png" width="900">
 </p>
@@ -30,6 +32,8 @@ A hands-on <b>Cybersecurity Lab</b> demonstrating how to build a <b>Security Mon
 ---
 
 # 📌 Overview
+
+This lab demonstrates how security analysts can detect authentication attacks, investigate suspicious activities, and perform threat hunting using Microsoft Sentinel.
 
 This project demonstrates how to build a **Security Monitoring Lab using Microsoft Sentinel in Microsoft Azure**.
 
@@ -47,7 +51,7 @@ The lab includes:
 
 ---
 
-# 📊 Azure Sentinel Architecture
+# 🏗️ Lab Architecture
 
 This project simulates a **SOC monitoring pipeline in Microsoft Azure**.
 
@@ -245,23 +249,26 @@ Microsoft Sentinel provides centralized capabilities for:
 
 # 🎯 Security Monitoring Capabilities
 
-✔ Failed Login Detection  
+✔ Failed Login Detection (Event ID 4625)  
 ✔ Brute Force Attack Identification  
 ✔ Suspicious Authentication Monitoring  
-✔ Security Event Investigation  
-✔ Centralized Log Analysis  
-
+✔ Threat Hunting using KQL  
+✔ Centralized Log Analysis with Microsoft Sentinel
 ---
 
 # 🧠 Technologies Used
 
-- Microsoft Azure  
-- Microsoft Sentinel (SIEM)  
-- Azure Monitor Agent  
-- Log Analytics Workspace  
-- Kusto Query Language (KQL)  
-- Windows Security Events  
+![Azure](https://img.shields.io/badge/Microsoft-Azure-blue?logo=microsoftazure)
+![Sentinel](https://img.shields.io/badge/SIEM-Microsoft%20Sentinel-purple)
+![KQL](https://img.shields.io/badge/Query-KQL-orange)
+![Security](https://img.shields.io/badge/Domain-Cybersecurity-red)
 
+- Microsoft Azure
+- Microsoft Sentinel
+- Azure Monitor Agent
+- Log Analytics Workspace
+- Kusto Query Language (KQL)
+- Windows Security Events
 ---
 
 # 📁 Repository Structure
@@ -295,7 +302,8 @@ Azure-Sentinel-Security-Lab
 **Amal Udayanga Basnayake**
 
 Cybersecurity Enthusiast  
-Cloud Security | Microsoft Sentinel | Azure Security  
+
+Cloud Security • SIEM • Threat Detection • Microsoft Sentinel • Azure Security
 
 GitHub  
 https://github.com/AmalUBasnayake  
