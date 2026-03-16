@@ -61,17 +61,10 @@ Logs generated from a **Windows Virtual Machine** are collected using the **Azur
 
 ## 🔗 Security Data Flow
 
-```mermaid
-flowchart LR
 
-A[Windows Virtual Machine] --> B[Azure Monitor Agent]
-B --> C[Data Collection Rule]
-C --> D[Log Analytics Workspace]
-D --> E[Microsoft Sentinel SIEM]
-E --> F[Threat Detection Rules]
-F --> G[Security Alerts]
-G --> H[SOC Analyst Investigation]
-```
+<p align="center">
+<img src="images/Security-Data-Flow.png" width="100%">
+</p>
 
 ---
 
